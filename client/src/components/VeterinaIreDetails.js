@@ -3,35 +3,14 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './veterinairedetails.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { addveterinaire } from '../JS/requestSlice';
+
 
 function VeterinaireDetails({el, ping, setping}) {
-    const user = useSelector((state) => state.user.user);
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const dispatch=useDispatch();
-    const [newveterinaire, setnewveterinaire] = useState({
-        imgvet: el?.imgvet,
-
-        namevet: el?.namevet,
-
-        category: el?.category,
-
-        speciality: el?.speciality,
-
-        address: el?.address,
-
-        city: el?.city,
-
-        phone: el?.phone,
-
-        available: el?.available,
-
-        sourceprofile: el?.sourceprofile,
-   
-    })
+    
   return (
     <>
       <button onClick={handleShow} className='viewvet'>

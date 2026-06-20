@@ -2,16 +2,13 @@ import React from 'react'
 import { useState } from 'react';
 import { useSelector } from 'react-redux'
 import './pets.css';
-import { useNavigate } from 'react-router-dom';
 import PetDetails from './PetDetails';
 
 const Shop = ({ping, setping})=>{
     const pets = useSelector((state)=>state.pet.petlist);
     console.log(pets);
     const [category, setcategory] = useState("Cat");
-    const [role, setRole] = useState("All");
     const [search, setSearch] = useState("");
-    const navigate = useNavigate();
 
     const filteredPets = pets?.filter((el) => {
         const searchLower = search.toLowerCase();

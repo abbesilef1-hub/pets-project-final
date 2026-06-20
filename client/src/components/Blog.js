@@ -9,7 +9,7 @@ const Blog = () => {
   const [selectedEmergency, setSelectedEmergency] = useState(null);
 
   // 1. STATE : Guide Médical
-  const [petDiseases, setPetDiseases] = useState([
+  var petDiseases = [
     // --- DOG DISEASES ---
     {
       id: 1,
@@ -157,7 +157,7 @@ const Blog = () => {
       treatment: "Thorough ear cleaning, topical ear mite drops or systemic parasite control.",
       prevention: "Regular grooming and keeping away from untreated outdoor animals."
     }
-  ]);
+  ];
 
   // 2. STATE : Les Publications du Blog
   const [blogPosts, setBlogPosts] = useState([

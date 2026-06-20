@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./navbarr.css";
 import { useSelector } from 'react-redux';
 
@@ -24,7 +24,7 @@ function Navbarr() {
             <Link to="/services">Services</Link>
             <Link to="/contact">Contact Us</Link>
             {user?<Link to="/profil">Profil</Link> : null}
-            {user?.role=="admin"?<Link to="/dashboard">Dashboard</Link> : null}
+            {user?.role==="admin"?<Link to="/dashboard">Dashboard</Link> : null}
         </div>
 
   

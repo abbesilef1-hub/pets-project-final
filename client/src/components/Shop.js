@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import './shop.css';
 import { getproducts } from '../JS/productSlice';
 import ProductDetails from './ProductDetails';
@@ -11,7 +10,6 @@ const Shop = ({ ping, setping }) => {
     console.log(products);
     const [category, setcategory] = useState("Toys");
     const [petType, setPetType] = useState("Both");
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -110,55 +108,3 @@ export default Shop;
 
 
 
-
-
-
-{/* Deuxième Filtre Latéral : Sticky pour le type d'animal */}
-
-            // <div className="pet-type">
-
-            //     <button
-
-            //         className={`pet-type-btn ${petType === "Cat" ? "active-pet" : ""}`}
-
-            //         onClick={() => setPetType("Cat")}
-
-            //     >
-
-            //         <svg viewBox="0 0 640 640"><path d="M96 160C149 160 192 203 192 256L192 341.8C221.7 297.1 269.8 265.6 325.4 257.8C351 317.8 410.6 359.9 480 359.9C490.9 359.9 501.6 358.8 512 356.8L512 544C512 561.7 497.7 576 480 576C462.3 576 448 561.7 448 544L448 403.2L312 512L368 512C385.7 512 400 526.3 400 544C400 561.7 385.7 576 368 576L224 576C171 576 128 533 128 480L128 256C128 239.4 115.4 225.8 99.3 224.2L92.7 223.9C76.6 222.2 64 208.6 64 192C64 174.3 78.3 160 96 160zM565.8 67.2C576.2 58.5 592 65.9 592 79.5L592 192C592 253.9 541.9 304 480 304C418.1 304 368 253.9 368 192L368 79.5C368 65.9 383.8 58.5 394.2 67.2L448 112L512 112L565.8 67.2z"/></svg>
-
-            //         Cats
-
-            //     </button>
-
-
-
-            //     <button
-
-            //         className={`pet-type-btn ${petType === "Both" ? "active-pet" : ""}`}
-
-            //         onClick={() => setPetType("Both")}
-
-            //     >
-
-            //         🐾 Both
-
-            //     </button>
-
-
-
-            //     <button
-
-            //         className={`pet-type-btn ${petType === "Dog" ? "active-pet" : ""}`}
-
-            //         onClick={() => setPetType("Dog")}
-
-            //     >
-
-            //         <svg viewBox="0 0 640 640"><path d="M64 176C80.6 176 94.2 188.6 95.8 204.7L96.1 211.3C97.8 227.4 111.4 240 128 240L307.1 240L448 300.4L448 544C448 561.7 433.7 576 416 576L384 576C366.3 576 352 561.7 352 544L352 412.7C328 425 300.8 432 272 432C243.2 432 216 425 192 412.7L192 544C192 561.7 177.7 576 160 576L128 576C110.3 576 96 561.7 96 544L96 298.4C58.7 285.2 32 249.8 32 208C32 190.3 46.3 176 64 176zM387.8 32C395.5 32 402.7 35.6 407.4 41.8L424 64L476.1 64C488.8 64 501 69.1 510 78.1L528 96L584 96C597.3 96 608 106.7 608 120L608 144C608 188.2 572.2 224 528 224L464 224L457 252L332.3 198.6L363.9 51.4C366.3 40.1 376.2 32 387.8 32z"/></svg>
-
-            //         Dogs
-
-            //     </button>
-
-            // </div>

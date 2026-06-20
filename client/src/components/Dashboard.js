@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import './dashboard.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { deleteuser, edituser, getusers } from '../JS/userSlice/userSlice';
+import { deleteuser, getusers } from '../JS/userSlice/userSlice';
 import Edituser from './Edituser';
 import { deletepet } from '../JS/petSlice';
 import Editpet from './Editpet';
@@ -230,7 +230,7 @@ const Dashboard = ({el, ping, setping}) => {
                             <path d="M17.5 13l1-2 1 2" />
                         </svg>
                     </td>
-                    <td><img src={el?.image} style={{width:"30px"}}/></td>
+                    <td><img src={el?.image} style={{width:"30px"}} alt='error1'/></td>
                     <td>{el?.name}</td>
                     <td>{el?.price}</td>
                     <td>{el?.role}</td>
@@ -295,7 +295,7 @@ const Dashboard = ({el, ping, setping}) => {
                         </svg>
 
                     </td>
-                    <td><img src={el?.imgpet} style={{width:"30px"}}/></td>
+                    <td><img src={el?.imgpet} style={{width:"30px"}} alt='error1'/></td>
                     <td>{el?.namepet}</td>
                     <td>{el?.role}</td>
                     <td>{el?.nameowner}</td>
@@ -357,7 +357,7 @@ const Dashboard = ({el, ping, setping}) => {
                             <line x1="7" y1="7" x2="7.01" y2="7" strokeWidth="3" />
                         </svg>
                     </td>
-                    <td><img src={el?.image} style={{width:"30px"}}/></td>
+                    <td><img src={el?.image} style={{width:"30px"}} alt='error1'/></td>
                     <td>{el?.name}</td>
                     <td>{el?.price}</td>
                     <td>{el?.stock}</td>
@@ -417,7 +417,7 @@ const Dashboard = ({el, ping, setping}) => {
 
 
                     </td>
-                    <td><img src={el?.imgproduct} style={{width:"30px"}}/></td>
+                    <td><img src={el?.imgproduct} style={{width:"30px"}} alt='error1'/></td>
                     <td>{el?.product}</td>
                     <td>{el?.nameuser}</td>
                     <td>{el?.status}</td>
@@ -486,7 +486,7 @@ const Dashboard = ({el, ping, setping}) => {
                         </svg>
 
                     </td>
-                    <td><img src={el?.imgvet} style={{width:"30px"}}/></td>
+                    <td><img src={el?.imgvet} style={{width:"30px"}} alt='error1'/></td>
                     <td>{el?.namevet}</td>
                     <td>{el?.address}</td>
                     <td>{el?.city}</td>

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import './services.css';
-import { useNavigate } from 'react-router-dom';
-import { getveterinaires } from '../JS/veterinaireSlice';
 import VeterinaireDetails from './VeterinaIreDetails';
 // import VeterinairesDetails from './VeterinairesDetails';
 
@@ -14,8 +12,6 @@ const Services = ({ ping, setping }) => {
     const veterinaires = useSelector((state)=>state.veterinaire.veterinarylist);
     console.log(veterinaires);
     const [city, setcity] = useState("GABES");
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     // Référence pour manipuler le défilement du carrousel
     const carouselRef = useRef(null);
@@ -123,7 +119,7 @@ const Services = ({ ping, setping }) => {
         </div>
 
         <div className='listvet'>
-            {veterinaires ?.filter((el) => el?.city?.toLowerCase() === city.toLowerCase()).map((el) => (
+            {veterinaires?.filter((el) => el?.city?.toLowerCase() === city.toLowerCase()).map((el) => (
                 <div className='detailsvet' key={el.id || el.namevet}>
                         <div className="imgvet">
                             <img src={el?.imgvet} alt={el?.namevet} />

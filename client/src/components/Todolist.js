@@ -63,7 +63,7 @@ const Basket = ({ping, setping}) => {
 
     <div className="basketcart">
       <div className="titlebag">Pets To-do List</div>
-      {requests?.filter((el)=>el?.user==nameuser).map((el)=>
+      {requests?.filter((el)=>el?.user===nameuser).map((el)=>
     //   {requests?.map((el)=>
       <div className="item" key={el?._id}>
         
