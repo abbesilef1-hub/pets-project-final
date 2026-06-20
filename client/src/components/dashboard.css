@@ -1,0 +1,803 @@
+/* 
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #121216; 
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin-top: 35px;
+}
+
+
+.sidebar {
+  width: 90px;
+  background-color: #1a1a22; 
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-bottom: 50px;
+}
+
+.avatar-container {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #4f4f5a, #d18a93); 
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #d18a93;
+  border: 2px solid #1a1a22;
+  border-radius: 50%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  align-items: center;
+}
+
+.sidebar .btn {
+  background: none;
+  border: none;
+  color: #5d5d6a; 
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor; 
+}
+
+.sidebar .btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+
+.sidebar .btn.active {
+  color: #d18a93; 
+  background-color: #242432;
+  border: 1px solid rgba(209, 138, 147, 0.2); 
+  box-shadow: 0 4px 15px rgba(209, 138, 147, 0.1); 
+}
+
+
+.main {
+  flex: 1;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-x: hidden;
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1a1a22;
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+}
+
+.search-box input::placeholder {
+  color: #5d5d6a;
+}
+
+.search-box svg {
+  color: #5d5d6a;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notif-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #8c8c9e;
+}
+
+.admin-profile .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d18a93; 
+  object-fit: cover;
+}
+
+
+.section {
+  background-color: #1a1a22;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.titre {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  border-left: 4px solid #d18a93;
+  padding-left: 12px;
+}
+
+
+.section input[type='text'] {
+  background-color: #121216;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  width: 280px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.section input[type='text']:focus {
+  border-color: #d18a93;
+  box-shadow: 0 0 8px rgba(209, 138, 147, 0.2);
+}
+
+
+.box {
+  background-color: #121216;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 14px;
+  padding: 20px;
+  color: #8c8c9e;
+  
+  max-height: 450px;          
+  overflow-y: auto;           
+  overflow-x: auto;           
+  position: relative;        
+}
+
+
+.table {
+  color: #e0e0e6 !important;
+  margin-bottom: 0 !important;
+  vertical-align: middle !important;
+  border-collapse: separate !important;  
+  border-spacing: 0 !important;         
+}
+
+
+.table thead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;               
+}
+
+.table-bordered {
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.table th {
+  background-color: #121216 !important;  
+  color: #d18a93 !important;             
+  font-weight: 600 !important;
+  border-bottom: 2px solid rgba(209, 138, 147, 0.2) !important;
+  padding: 14px 10px !important;
+  font-size: 14px;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+}
+
+.table th svg {
+  width: 18px;
+  height: 18px;
+  fill: #d18a93;
+}
+
+.table td {
+  background-color: transparent !important;
+  padding: 12px 10px !important;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+  font-size: 14px;
+  color: #b5b5c3 !important;
+}
+
+
+.table-striped tbody tr:nth-of-type(odd) td {
+  background-color: rgba(255, 255, 255, 0.01) !important;
+}
+
+
+.table-hover tbody tr:hover td {
+  background-color: rgba(209, 138, 147, 0.04) !important;
+  color: #ffffff !important;
+}
+
+
+.table td button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.table td button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.table td:nth-last-child(2) button {
+  color: #5cb85c; 
+}
+.table td:nth-last-child(2) button:hover {
+  background-color: rgba(92, 184, 92, 0.1);
+  box-shadow: 0 0 8px rgba(92, 184, 92, 0.2);
+}
+
+
+.table td:last-child button, 
+.table td button.del-user {
+  color: #d9534f; 
+}
+.table td:last-child button:hover {
+  background-color: rgba(217, 83, 79, 0.1);
+  box-shadow: 0 0 8px rgba(217, 83, 79, 0.2);
+}
+
+.table td:first-child {
+  text-align: center; 
+}
+
+.table td:first-child svg {
+  width: 28px;                  
+  height: 28px;
+  display: inline-block;        
+  vertical-align: middle;       
+  box-sizing: border-box;       
+  background-color: rgba(255, 255, 255, 0.05); 
+  color: #a1a1b5;               
+  padding: 5px;
+  border-radius: 50%;           
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.table td:first-child svg:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;               
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.section-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+
+.btn-add-pet-dash {
+  background-color: #d18a93 !important;
+  color: #121216 !important;
+  border: none !important;
+  padding: 10px 18px !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-add-pet-dash:hover {
+  background-color: #c07b84 !important;
+  box-shadow: 0 4px 12px rgba(209, 138, 147, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.btn-add-pet-dash svg {
+  stroke: #121216 !important;
+} */
+
+
+
+
+/* ==========================================================================
+   GLOBAL DASHBOARD LAYOUT
+   ========================================================================== */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: #121216; /* Gris ghamre9 3al k7al math */
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin-top: 35px;
+}
+
+/* ==========================================================================
+   SIDEBAR: GRIS MATRIX
+   ========================================================================== */
+.sidebar {
+    width: 90px;
+    background-color: #1a1a22; /* Gris s7i7 */
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.avatar-container {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #4f4f5a, #d18a93); /* Mix gris w rose */
+    border-radius: 50%;
+    position: relative;
+}
+
+.dot-online {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #d18a93; /* Dot rose */
+    border: 2px solid #1a1a22;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+}
+
+/* SIDEBAR NAV BUTTONS */
+.sidebar .btn {
+    background: none;
+    border: none;
+    color: #5d5d6a; /* Gris tafi */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor; /* Mech yebda matching m3a el color state */
+}
+
+.sidebar .btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* EL BOUTON ACTIVE: GLOW ROSE DANS LE NOIR */
+.sidebar .btn.active {
+    color: #d18a93; /* El text/icon ywalli rose */
+    background-color: #242432; /* Gris kler chwaya */
+    border: 1px solid rgba(209, 138, 147, 0.2); /* Border fih touch rose */
+    box-shadow: 0 4px 15px rgba(209, 138, 147, 0.1); /* Glow rose sghir */
+}
+
+/* ==========================================================================
+   MAIN PANEL AREA
+   ========================================================================== */
+.main {
+    flex: 1;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   TOPBAR AREA & NOTIFICATION
+   ========================================================================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1a22;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    width: 100%;
+}
+
+.search-box input::placeholder {
+    color: #5d5d6a;
+}
+
+.search-box svg {
+    color: #5d5d6a;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nouvel alignement et styles cloche SVG */
+.notif-container-blog {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notif-btn-blog {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #8c8c9e;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.notif-svg-icon {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.notif-btn-blog:hover {
+    color: #d18a93;
+}
+
+.notif-btn-blog:hover .notif-svg-icon {
+    animation: bellRing 0.6s ease-in-out;
+}
+
+.notif-badge-blog {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #bf7480;
+    border-radius: 50%;
+    border: 2px solid #1a1a22;
+}
+
+.admin-profile .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #d18a93; /* Avatar border rose */
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   CONTENT BOXES WITH ROSY/GREY GLOW
+   ========================================================================== */
+.section {
+    background-color: #1a1a22;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.titre {
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    border-left: 4px solid #d18a93; /* Line rose 3al issar mta3 el title */
+    padding-left: 12px;
+}
+
+/* INPUT SEARCH INSIDE THE SECTION */
+.section input[type='text'] {
+    background-color: #121216;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    width: 280px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.section input[type='text']:focus {
+    border-color: #d18a93;
+    box-shadow: 0 0 8px rgba(209, 138, 147, 0.2);
+}
+
+/* THE CONTAINER BOX (HENA RIGLNA EL SCROLL) */
+.box {
+    background-color: #121216;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 14px;
+    padding: 20px;
+    color: #8c8c9e;
+    max-height: 450px;          
+    overflow-y: auto;           
+    overflow-x: auto;           
+    position: relative;    /* الحاوية ثابتة ومستقرة */     
+}
+
+/* Custom Scrollbar pour harmoniser le thème sombre */
+.box::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.box::-webkit-scrollbar-track {
+    background: #121216;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background: #242432;
+    border-radius: 10px;
+}
+
+.box::-webkit-scrollbar-thumb:hover {
+    background: #d18a93;
+}
+
+/* ==========================================================================
+   RIGUELA MTA3 REACT-BOOTSTRAP TABLE
+   ========================================================================== */
+.table {
+    color: #e0e0e6 !important;
+    margin-bottom: 0 !important;
+    vertical-align: middle !important;
+    border-collapse: collapse !important; 
+    position: relative;
+    width: 100%;
+}
+
+/* إجبار المتصفح على حجب الأسطر السفلية عند الصعود */
+.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 100 !important;
+}
+
+.table-bordered {
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 🎯 الحل السحري: تثبيت بالـ Sticky المانع للتداخل بدون تفاوت البيكسلات */
+.table th {
+    position: -webkit-sticky !important; /* لدعم متصفحات سـافاري */
+    position: sticky !important;
+    top: 0 !important;
+    background-color: #121216 !important; /* نفس لون الـ box لحجب النصوص 100% */
+    color: #d18a93 !important;             
+    font-weight: 600 !important;
+    border-bottom: 2px solid rgba(209, 138, 147, 0.3) !important;
+    padding: 14px 10px !important;
+    font-size: 14px;
+    z-index: 100 !important; 
+    box-shadow: inset 0 -1px 0 rgba(209, 138, 147, 0.3); 
+}
+
+/* Rigla mta3 el SVG jdid eli f-west th el icon loop */
+.table th svg {
+    width: 18px;
+    height: 18px;
+    fill: #d18a93;
+}
+
+.table td {
+    background-color: transparent !important;
+    padding: 12px 10px !important;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+    font-size: 14px;
+    color: #b5b5c3 !important;
+}
+
+/* Striped dark matching rows */
+.table-striped tbody tr:nth-of-type(odd) td {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+}
+
+/* Hover lines */
+.table-hover tbody tr:hover td {
+    background-color: rgba(209, 138, 147, 0.04) !important;
+    color: #ffffff !important;
+}
+
+/* TABLE ACTION BUTTONS (Edit & Delete Icons inside cells) */
+.table td button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.table td button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Edit icon button */
+.table td:nth-last-child(2) button {
+    color: #5cb85c; 
+}
+.table td:nth-last-child(2) button:hover {
+    background-color: rgba(92, 184, 92, 0.1);
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.2);
+}
+
+/* Delete icon button */
+.table td:last-child button, 
+.table td button.del-user {
+    color: #d9534f; 
+}
+.table td:last-child button:hover {
+    background-color: rgba(217, 83, 79, 0.1);
+    box-shadow: 0 0 8px rgba(217, 83, 79, 0.2);
+}
+
+/* ==========================================
+    🎯 USER AVATAR SVG STYLING (FIRST TD IN TABLE)
+   ========================================== */
+.table td:first-child {
+    text-align: center; 
+}
+
+.table td:first-child svg {
+    width: 28px;                  
+    height: 28px;
+    display: inline-block;        
+    vertical-align: middle;       
+    box-sizing: border-box;       
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: #a1a1b5;              
+    padding: 5px;
+    border-radius: 50%;           
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease-in-out;
+}
+
+.table td:first-child svg:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;              
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container wrap lil Input wel Button bech yjiw aligned f-nafes el sater */
+.section-header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+/* El Bouton Add Pet (Rose Pastel Minimalist) */
+.btn-add-pet-dash {
+    background-color: #d18a93 !important;
+    color: #121216 !important;
+    border: none !important;
+    padding: 10px 18px !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-add-pet-dash:hover {
+    background-color: #c07b84 !important;
+    box-shadow: 0 4px 12px rgba(209, 138, 147, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+.btn-add-pet-dash svg {
+    stroke: #121216 !important;
+}
+
+/* ==========================================================================
+   KEYFRAMES ANIMATIONS (BELL RINGEFFECT)
+   ========================================================================== */
+@keyframes bellRing {
+    0%, 100% { transform: rotate(0); }
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-3deg); }
+}

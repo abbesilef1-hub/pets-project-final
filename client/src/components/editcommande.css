@@ -1,0 +1,167 @@
+/* ==========================================
+   BUTTON EDIT (TRIGGER)
+   ========================================== */
+.edit-user-btn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #4f46e5; /* Indigo color modern lil edit */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-user-btn:hover {
+  background-color: #f8fafc;
+  border-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   DARK MODAL WRAPPER (React-Bootstrap)
+   ========================================== */
+.dark-modal-wrapper-commande .modal-content {
+  background-color: #1e1e24; /* Background dark sleek */
+  color: #f8fafc;
+  border: 1px solid #2d2d39;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-modal-wrapper-commande .modal-header {
+  border-bottom: 1px solid #2d2d39;
+  padding: 18px 24px;
+}
+
+.dark-modal-wrapper-commande .modal-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #d18a93 !important; /* 🌸 Rose Pastel accent matching Title */
+}
+
+.dark-modal-wrapper-commande .btn-close {
+  filter: invert(64%) sepia(21%) saturate(674%) hue-rotate(305deg) brightness(92%) contrast(84%) !important;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.dark-modal-wrapper-commande .btn-close:hover {
+  filter: invert(58%) sepia(22%) saturate(650%) hue-rotate(305deg) brightness(88%) contrast(84%) !important;
+  opacity: 1;
+}
+
+/* ==========================================
+   MODAL BODY & FORM ELEMENTS
+   ========================================== */
+.dark-modal-wrapper-commande .modal-body {
+  padding: 24px;
+}
+
+.modal-info-text-commande {
+  font-size: 15px;
+  color: #94a3b8; /* Slate gray light */
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-info-text-commande strong {
+  /* color: #d18a93;  */
+   color: #f5ced3; 
+  font-weight: 600;
+}
+
+/* .modal-info-text-commande strong {
+  color: #e2e8f0; 
+  font-weight: 600;
+} */
+
+.modal-label-commande {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+/* Customizing React-Bootstrap Form.Select */
+.dark-modal-input-commande {
+  background-color: #121214 !important;
+  border: 1px solid #3f3f46 !important;
+  color: #f4f4f5 !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease-in-out !important;
+}
+
+.dark-modal-input-commande:focus {
+  border-color: #4f46e5 !important; /* Focus Indigo line */
+  background-color: #121214 !important;
+}
+
+/* Option custom background padding */
+.dark-modal-input-commande option {
+  background-color: #1e1e24;
+  color: #f4f4f5;
+  padding: 10px;
+}
+
+/* ==========================================
+   MODAL FOOTER & ACTION BUTTONS
+   ========================================== */
+.dark-modal-wrapper-commande .modal-footer {
+  border-top: 1px solid #2d2d39;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Cancel Button */
+.btn-modal-close-commande {
+  background: rgb(201, 199, 199) !important;        
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;  
+  color: #404041a9 !important;                               
+  padding: 6px 18px 9px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -5px;
+}
+
+.btn-modal-close-commande:hover {
+  background-color: rgb(158, 157, 157) !important;   
+  border-color: rgba(255, 253, 253, 0.25) !important;      
+  color: #ffffff !important;                               
+}
+
+/* 🌸 Save Changes Button (Rose Accent) */
+.btn-modal-save-commande {
+  background-color: #d18a93 !important;                    /* 🌟 ROSE BACKGROUND */
+  color: #121216 !important;                               /* Dark text for great contrast */
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none !important;
+  padding: 6px 18px 9px 18px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+}
+
+.btn-modal-save-commande:hover {
+  background-color: #c07b84 !important;
+  color: #f8d4d9 !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,105 @@
+/* Bouton View More */
+.viewvet {
+    padding: 7px 14px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(209, 138, 147, 0.25);
+    background: #fdf6f7;
+    color: #4a3f40;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.viewvet:hover {
+    background: #d18a93;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Titre de la catégorie dans le header du Modal */
+#category {
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+/* Conteneur principal dans le Modal Body */
+.mymodalvet {
+    display: flex;
+    gap: 20px; /* Réduit pour compacter horizontalement */
+    align-items: center; 
+    padding: 5px; /* Padding réduit pour gagner de la hauteur */
+    max-height: 55vh; /* Sécurité : le contenu ne dépassera pas 60% de la hauteur de l'écran */
+}
+
+/* Image du vétérinaire - Réduite à 140px pour faire remonter le bouton Close */
+.mymodalvet img {
+    width: 140px; 
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+/* Zone de texte à droite */
+.textvet {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 4%; /* Espacement vertical réduit à 8px */
+}
+
+/* Le nom prend 100% de la largeur */
+.textvet h3 {
+    width: 100%;
+    margin: 0 0 4px 0;
+    color: #212529;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Les détails classiques prennent la moitié de la largeur */
+.textvet p {
+    width: 48%; 
+    margin: 0;
+    font-size: 0.88rem; /* Légèrement plus petit pour un rendu plus compact */
+    color: #495057;
+    border-bottom: 1px solid #f1f3f5;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+/* Style des titres en gras */
+.textvet p strong {
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Solution pour "Source Profile" : Prend 100% de la largeur */
+.textvet p:last-child {
+    width: 100%;
+    margin-top: 4px;
+    border-bottom: none; 
+}
+
+/* Responsive : Tout passe sur une seule colonne sur mobile */
+@media (max-width: 768px) {
+    .mymodalvet {
+        flex-direction: column;
+        align-items: center;
+        max-height: none; /* Relâche la contrainte sur mobile si besoin de scroller */
+    }
+
+    .mymodalvet img {
+        margin-bottom: 10px;
+    }
+
+    .textvet p {
+        width: 100%;
+    }
+}

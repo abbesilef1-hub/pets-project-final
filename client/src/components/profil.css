@@ -1,0 +1,351 @@
+/* ==========================================================================
+   1. CONFIGURATION GLOBALE & LAYOUT
+   ========================================================================== */
+.myprofil {
+  background: #fcfbfa; 
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #2c2a2a; 
+  margin: 0;
+  padding: 0;
+}
+
+.profile-page {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 20px; 
+  position: relative;
+  padding-left: 80px;
+}
+
+/* CARTE PRINCIPALE */
+.profile-page .content {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 10 !important; /* Dima l-fou9 fou9 el background */
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1.5rem; 
+  box-shadow: 0 20px 40px rgba(110, 100, 101, 0.08); 
+}
+
+@media (max-width: 990px) {
+  .profile-page .content {
+    max-width: 420px;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+/* ==========================================================================
+   2. BANNIÈRE & AVATAR
+   ========================================================================== */
+.profile-page .content__cover {
+  position: relative;
+  height: 12rem;
+  background: linear-gradient(135deg, #6e6465 0%, #a29193 50%, #d18a93 100%); 
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+@media (max-width: 990px) {
+  .profile-page .content__cover {
+    border-radius: 0;
+  }
+}
+
+.profile-page .content__bull {
+  display: none;
+  height: 12rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 990px) {
+  .profile-page .content__bull {
+    display: block;
+  }
+}
+
+.profile-page .content__bull span {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.profile-page .content__bull span:nth-child(1) { width: 5rem; height: 5rem; top: -6%; left: -3%; background: rgba(209, 138, 147, 0.15); }
+.profile-page .content__bull span:nth-child(2) { width: 8rem; height: 8rem; top: 18%; left: 18%; background: rgba(255,255,255,0.04); }
+.profile-page .content__bull span:nth-child(3) { width: 3rem; height: 3rem; top: 8%; right: 2%; background: rgba(255,255,255,0.04); }
+.profile-page .content__bull span:nth-child(4) { width: 6rem; height: 6rem; top: 28%; right: 12%; background: rgba(110, 100, 101, 0.15); }
+.profile-page .content__bull span:nth-child(5) { width: 4rem; height: 4rem; top: 70%; left: -6%; background: rgba(255,255,255,0.02); }
+
+.profile-page .content__avatar {
+  width: 11rem;
+  height: 11rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+  background: #6e6465 url("https://static.vecteezy.com/ti/vecteur-libre/p1/24191699-profil-icone-ou-symbole-dans-rose-et-blanc-couleur-vectoriel.jpg") center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(110, 100, 101, 0.1);
+}
+
+/* ==========================================================================
+   3. BOUTONS ACTIONS (TOP)
+   ========================================================================== */
+.profile-page .content__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+@media (max-width: 990px) {
+  .profile-page .content__actions {
+    padding: 0.8rem 2rem;
+  }
+}
+
+.profile-page .content__actions a, 
+.profile-page .content__actions .logout-action-btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;      
+  justify-content: center;  
+  height: 1.8rem;           
+  padding: 0 1rem;          
+  border-radius: 0.5rem; 
+  text-decoration: none;
+  font-size: 0.75rem;       
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.profile-page .content__actions a:first-child { color: #d18a93; } 
+.profile-page .content__actions a:last-of-type { color: #6e6465; } 
+.profile-page .content__actions .logout-action-btn { color: #a29193; }
+
+.profile-page .content__actions a:hover:first-child { background: #d18a93; color: #fff; }
+.profile-page .content__actions a:hover:last-of-type { background: #6e6465; color: #fff; }
+.profile-page .content__actions .logout-action-btn:hover { background: #a29193; color: #fff; }
+
+/* ==========================================================================
+   4. TITRES & TEXTES
+   ========================================================================== */
+.profile-page .content__title {
+  margin-top: 4.5rem;
+  text-align: center;
+  order: 1;
+}
+
+.profile-page .content__title h1 {
+  margin-bottom: 0.2rem;
+  font-size: 2.2rem;
+  color: #3a3535; 
+  font-weight: 700;
+}
+
+.profile-page .content__title span {
+  font-size: 0.95rem;
+  color: #837778;
+}
+
+/* ==========================================================================
+   5. SECTION INPUTS (Z-INDEX FIXÉ)
+   ========================================================================== */
+.profile-page .content__description {
+  margin-top: 2.5rem;
+  order: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;          
+  padding: 0 3rem;      
+}
+
+@media (max-width: 990px) {
+  .profile-page .content__description {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem;
+  }
+}
+
+.profile-page .content__description input {
+  width: 100%;
+  padding: 0.6rem 0.8rem; 
+  border-radius: 0.35rem;  
+  border: 1px solid #d4cece; 
+  font-family: inherit;
+  font-size: 0.85rem;     
+  color: #2c2a2a;
+  background-color: #faf9f9; 
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 12 !important; /* Force l'input à prendre la priorité sur le click */
+}
+
+.profile-page .content__description input:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #d18a93; 
+  box-shadow: 0 0 0 3px rgba(209, 138, 147, 0.15);
+}
+
+/* ==========================================================================
+   6. STATISTIQUES (CHIFFRES)
+   ========================================================================== */
+.profile-page .content__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  list-style-type: none;
+  order: 3;
+  padding: 0;
+}
+
+.profile-page .content__list li {
+  padding: 0 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #837778;
+}
+
+.profile-page .content__list li span {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #3a3535;
+}
+
+/* ==========================================================================
+   7. BOUTON PRINCIPAL (SHOW MORE STRUCTURE RIGLÉE)
+   ========================================================================== */
+.profile-page .content__button {
+  margin: 3rem 0 2rem;
+  text-align: center;
+  order: 4;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-page .content__button .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.7rem 2.5rem; 
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.profile-page .content__button .button .button__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(90deg, #6e6465 0%, #d18a93 100%); 
+  border-radius: 2rem; 
+  box-shadow: 0 4px 15px rgba(209, 138, 147, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-page .content__button .button .button__border {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.profile-page .content__button .button .button__text {
+  position: relative;
+  z-index: 3; 
+  margin: 0;
+  font-size: 0.85rem;     
+  font-weight: 600;
+  color: #ffffff; 
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.profile-page .content__button .button:hover {
+  transform: translateY(-2px); 
+}
+
+.profile-page .content__button .button:hover .button__bg {
+  background: linear-gradient(90deg, #595152 0%, #c47a83 100%);
+  box-shadow: 0 6px 20px rgba(209, 138, 147, 0.35);
+}
+
+.profile-page .content__button .button:hover .button__border {
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.profile-page .content__button .button:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   8. ARRIÈRE-PLAN DE LA PAGE & ANIMATIONS (POINTER-EVENTS NONE)
+   ========================================================================== */
+.profile-page .bg {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1 !important;
+  pointer-events: none; /* Imbaddel ay block mta3 click 3al les inputs */
+}
+
+.profile-page .bg div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6e6465 0%, #a29193 40%, #d18a93 100%);
+}
+
+.profile-page .bg span {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  animation: floating 34s infinite linear;
+}
+
+.profile-page .bg span:nth-child(1) { width: 11rem; height: 11rem; top: 30%; left: 16%; background: rgba(209, 138, 147, 0.05); }
+.profile-page .bg span:nth-child(2) { width: 8rem; height: 8rem; top: 18%; left: 1%; background: rgba(255,255,255,0.02); }
+.profile-page .bg span:nth-child(3) { width: 8rem; height: 8rem; top: 34%; right: 10%; background: rgba(209, 138, 147, 0.04); }
+
+@keyframes floating {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(180deg); }
+  100% { transform: translateY(0px) rotate(360deg); }
+}

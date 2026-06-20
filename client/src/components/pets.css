@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Outfit:wght@400;600;700&');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+/* GLOBAL */
+.parentpet {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a3f40;
+}
+
+.pets-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #4a3f40;
+    padding-bottom: 35px; 
+    margin-top: -40px !important;
+}
+
+.pets-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 10px auto;
+    background: linear-gradient(90deg, #6e6465, #d18a93);
+    border-radius: 10px;
+}
+
+/* FILTER BUTTONS */
+.buttonspet {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.buttonspet button {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: #fdf6f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 16px rgba(209, 138, 147, 0.12);
+}
+
+.buttonspet button img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.buttonspet button:hover {
+    background: #d18a93;
+    transform: translateY(-3px);
+}
+
+.buttonspet button.active {
+    background: #d18a93;
+    transform: scale(1.08);
+}
+
+.buttonspet button.active img {
+    filter: brightness(0) invert(1);
+}
+
+/* GRID (COMPACT) */
+.listpetss {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    /* gap: 20px;
+    margin: 80px 60px; */
+    gap: 25px;      
+    margin: 60px -3px 0px 115px; 
+    width: 80%;
+}
+
+/* CARD SMALL */
+.details {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(209, 138, 147, 0.12);
+    box-shadow: 0 6px 15px rgba(209, 138, 147, 0.06);
+    transition: 0.25s ease;
+}
+
+.details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(209, 138, 147, 0.15);
+}
+
+/* IMAGE SMALL */
+.img-container {
+    width: 100%;
+    height: 120px; 
+    overflow: hidden;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.badge-sell {
+    background: #d18a93;
+}
+
+.badge-adopt {
+    background: #6e6465;
+}
+
+/* TEXT COMPACT */
+.cardpet {
+    padding: 10px;
+}
+
+.cardpet h3 {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #4a3f40;
+}
+
+.info-row {
+    font-size: 12px;
+    color: #6e6465;
+}
+
+.price-tag {
+    margin: 6px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #d18a93;
+}
+
+/* .paw-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 20px 0 40px 0; 
+}
+
+.paw-divider span:first-child,
+.paw-divider span:last-child {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d18a93, transparent);
+    opacity: 0.5;
+}
+ 
+.paws {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.paw-icon {
+    width: 22px;
+    height: 22px;
+    fill: #6e6465;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease, fill 0.3s ease;
+}
+
+.paws:hover .paw-icon {
+    transform: scale(1.15);
+    opacity: 1;
+    fill: #bf7480;
+}
+
+.paw-divider:hover .paw-icon {
+    transform: scale(1.1);
+    opacity: 1;
+} */
+
+.paw-divider-vet {
+    display: flex;
+    align-items: center;      
+    justify-content: center;   
+    gap: 18px;
+    margin: 20px 0 40px 0;    
+    width: 100%;
+}
+
+.paw-divider-vet span:first-child,
+.paw-divider-vet span:last-child {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d18a93, transparent);
+    opacity: 0.5;
+}
+
+.paws-vet {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.paw-icon-vet {
+    width: 22px;
+    height: 22px;
+    fill: #6e6465; 
+    opacity: 0.85;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.paws-vet:hover .paw-icon-vet {
+    transform: scale(1.15);
+    fill: #bf7480; 
+}
+
+/* --- BOX FOUQ EL TITRE LISAN EL YMIN --- */
+.search-top-row {
+    display: flex;
+    justify-content: flex-end; /* Tarja3 dza 3al ymin exact */
+    width: 100%;
+    margin-bottom: -15px; /* Techbed el titre chwaya l-fouq bch mayab9ash space kbir */
+}
+
+/* El Box mta3 el Input */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px; /* Thabbatna el 3ordh mta3 barra */
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border-radius: 25px;
+    border: 2px solid rgba(209, 138, 147, 0.25);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #4a3f40;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #d18a93;
+    box-shadow: 0 4px 15px rgba(209, 138, 147, 0.12);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 15px;
+    color: #6e6465;
+    pointer-events: none;
+}
+
+/* El Titre to93od centered ndhifa */
+.pets-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #4a3f40;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SEARCH CONTAINER ROW
+========================= */
+
+.search-top-row {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    height: 45px;
+    background: #ffffff;
+    border: 2px solid rgba(209, 138, 147, 0.2);
+    border-radius: 50px;
+    padding: 6px 8px;
+    box-shadow: 0 8px 20px rgba(209, 138, 147, 0.08);
+    transition: all 0.3s ease;
+    gap: 8px;
+}
+
+/* effet focus global */
+.search-container:focus-within {
+    border-color: #d18a93;
+    box-shadow: 0 10px 25px rgba(209, 138, 147, 0.18);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.search-bar {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+    color: #4a3f40;
+    background: transparent;
+}
+
+.search-bar::placeholder {
+    color: #a79a9b;
+    font-size: 14px;
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-container button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6e6465, #d18a93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* hover button */
+.search-container button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(209, 138, 147, 0.3);
+}
+
+/* svg icon */
+.search-container button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+

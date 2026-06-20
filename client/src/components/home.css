@@ -1,0 +1,699 @@
+/* ==========================================================================
+   PET WELFARE ASYMMETRIC HOME SECTION (ROSE GLOW STYLE & ORIGINAL IMAGES)
+   ========================================================================== */
+
+.home-welfare-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fbf5e7; 
+    padding: 80px 8%;
+    min-height: calc(100vh - 35px);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
+}
+
+/* --- CÔTÉ GAUCHE : CONTENU --- */
+.welfare-content-home {
+    flex: 1.2;
+    max-width: 580px;
+    margin-top: 120px;
+}
+
+/* Badge circulaire supérieur (Fille + Chien) */
+.avatar-badge-wrapper-home {
+    width: 130px;
+    height: 130px;
+    background-color: #d18a93; 
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(209, 138, 147, 0.15);
+}
+
+.avatar-badge-img-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+/* Titre principal - Version sombre et intense du Rose Glow */
+.welfare-title-home {
+    font-size: 40px;
+    font-weight: 800;
+    color: #a85f68; 
+    line-height: 1.3;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.inline-cat-badge-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 45px;
+    margin: 0 10px;
+    position: relative;
+    background-color: #d18a93;
+    border-radius: 50px;
+    padding: 3px;
+    vertical-align: middle;
+    overflow: visible; 
+}
+
+.inline-cat-badge-home img {
+    width: 160%;
+    height: 180%;
+    object-fit: contain;
+    position: absolute;
+    top: -20px;  
+    left: 50%;
+    transform: translateX(-50%);
+    filter:
+      drop-shadow(2px 0 0 #fff)
+      drop-shadow(-2px 0 0 #fff)
+      drop-shadow(0 2px 0 #fff)
+      drop-shadow(0 -2px 0 #fff);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.inline-cat-badge-home:hover img {
+    transform: translateX(-50%) scale(1.08);
+}
+
+/* Description - Gris doux */
+.welfare-description-home {
+    color: #7e7e8c;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Grille des caractéristiques */
+.features-grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.feature-item-home {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.paw-icon-home {
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Texte des caractéristiques - Accordé en Rose Glow */
+.feature-text-home {
+    font-size: 16px;
+    font-weight: 700;
+    color: #d18a93;
+}
+
+/* Bouton Explorer Premium - Rose Glow principal */
+.btn-explore-welfare-home {
+    background-color: #d18a93;
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(209, 138, 147, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-explore-welfare-home:hover {
+    transform: translateY(-2px);
+    background-color: #a85f68; 
+    box-shadow: 0 12px 24px rgba(209, 138, 147, 0.3);
+}
+
+/* --- CÔTÉ DROIT : GALERIE DE PHOTOS PILULES --- */
+.welfare-gallery-home {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.welfare-gallery-home .gallery-card {
+    border-radius: 140px; 
+    overflow: hidden;
+    border: 6px solid #ffffff; 
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.welfare-gallery-home .gallery-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Cadre grand format */
+.card-tall-home {
+    width: 270px;
+    height: 460px;
+}
+
+/* Cadre court décalé */
+.card-short-home {
+    width: 240px;
+    height: 360px;
+    margin-top: 80px; 
+}
+
+.welfare-gallery-home .gallery-card:hover {
+    transform: translateY(-10px);
+    border-color: #d18a93; 
+}
+
+
+
+
+/* ==========================================================================
+   ACHIEVEMENTS COUNTER SECTION (Ref: home2.PNG Style)
+   ========================================================================== */
+
+.achievements-section-home {
+    background-color: #fbf5e7; 
+    padding: 60px 8% 100px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Le grand cadre arrondi */
+.achievements-container-home {
+    background-color: #f4ebd4; 
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 60px; 
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+}
+
+.achievements-badge-top-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.achievements-paw-svg-home {
+    width: 40px;
+    height: 40px;
+    color: #a39b9c; 
+}
+
+.achievements-subtitle-home {
+    font-size: 13px;
+    font-weight: 700;
+    color: #756f70; 
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.achievements-title-home {
+    font-size: 36px;
+    font-weight: 800;
+    color: #a85f68; 
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+/* Grille des 4 cartes pilules */
+.achievements-grid-home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* La capsule ovale parfaite (Style home2.PNG) */
+.achievement-card-home {
+    background-color: #ffffff; 
+    border-radius: 100px; 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card-home:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); 
+}
+
+/* Ronds des icônes colorées */
+.ach-icon-wrapper-home {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ach-blue-home { background-color: #FFEAA7; }     
+.ach-orange-home { background-color: #A8E6CF; } 
+.ach-yellow-home { background-color: #AED8F2; }      
+.ach-cyan-home { background-color: #D6A2E8; }    
+
+.ach-icon-svg-home {
+    width: 28px;
+    height: 28px;
+    color: #ffffff; 
+    display: block;
+}
+
+.ach-icon-svg-home path {
+    fill: currentColor !important;
+}
+
+/* Les grands nombres */
+.ach-number-home {
+    font-size: 38px;
+    font-weight: 800;
+    color: #a85f68; 
+    margin: 0 0 8px 0;
+}
+
+.ach-label-home {
+    font-size: 15px;
+    font-weight: 700;
+    color: #756f70; 
+    margin: 0;
+}
+
+
+
+/* ==========================================================================
+   ✨ ULTIMATE 3-CARDS FILLED ADS MARQUEE (Corrected calculations & Details) ✨
+   ========================================================================== */
+
+.promo-marquee-section-home {
+    background-color: #fbf5e7; 
+    padding: 80px 0; 
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.marquee-wrapper-home {
+    display: flex;
+    width: calc(530px * 3 + 50px * 2); 
+    max-width: 100%; 
+    overflow: hidden; 
+    position: relative;
+    padding: 25px 0; 
+}
+
+.marquee-track-home {
+    display: flex;
+    gap: 50px; 
+    width: max-content; 
+    will-change: transform;
+    animation: symmetricStepScrollHome 28s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+.marquee-wrapper-home:hover .marquee-track-home {
+    animation-play-state: paused;
+}
+
+.promo-card-home {
+    width: 530px;
+    height: 320px;
+    border-radius: 48px; 
+    padding: 40px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+    overflow: hidden; 
+    flex-shrink: 0; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.025); 
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.card-orange-pastel-home { background-color: #ffd8b3; } 
+.card-purple-pastel-home { background-color: #D6A2E8; } 
+.card-blue-pastel-home { background-color: #AED8F2; }   
+.card-green-pastel-home { background-color: #A8E6CF; }  
+
+
+.card-bg-shape-home {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.28);
+    top: -60px;
+    left: -60px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-bg-shape-small-home {
+    position: absolute;
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    /* background: rgba(0, 0, 0, 0.06);  */
+    background: rgba(255, 255, 255, 0.18); 
+    
+    top: -30px;  
+    right: -30px; 
+    z-index: 1;   
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.promo-card-home:hover .card-bg-shape-small-home {
+    transform: scale(1.15) translate(-6px, 6px);
+}
+
+.promo-text-side-home {
+    width: 55%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    z-index: 2; 
+}
+
+.promo-text-side-home h2 {
+    font-size: 26px; 
+    font-weight: 800;
+    color: #a85f68; 
+    line-height: 1.2;
+    margin: 0 0 10px 0; 
+}
+
+.promo-text-side-home p {
+    font-size: 15px; 
+    font-weight: 600;
+    color: #756f70; 
+    margin: 0 0 20px 0; 
+    line-height: 1.4;
+}
+
+.badge-bogo-home {
+    background-color: #a85f68; 
+    color: #ffffff !important; 
+    display: inline-block;
+    align-self: flex-start; 
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px !important;
+    font-weight: 700;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.card-action-btn-home {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a85f68;
+    font-weight: 700;
+    font-size: 15px;
+    transition: gap 0.3s ease;
+}
+
+.card-action-btn-home svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.promo-img-side-home {
+    width: 45%; 
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    z-index: 2;
+}
+
+.promo-img-side-home img {
+    width: 250px; 
+    height: 250px; 
+    object-fit: contain; 
+    position: absolute;
+    bottom: -15px; 
+    right: -20px; 
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.promo-card-home:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px rgba(168, 95, 104, 0.16);
+}
+
+.promo-card-home:hover .card-action-btn-home svg {
+    transform: translateX(6px);
+}
+
+.promo-card-home:hover .card-bg-shape-home {
+    transform: scale(1.12);
+}
+
+.promo-card-home:hover .pet-dog-glasses-home img { transform: scale(1.08) rotate(-4deg) translateY(-3px); }
+.promo-card-home:hover .pet-cat-look-home img { transform: scale(1.08) translateY(-3px); }
+.promo-card-home:hover .pet-corgi-jump-home img { transform: translateY(-8px) scale(1.06); }
+.promo-card-home:hover .pet-food-bowl-home img { transform: scale(1.08) translateY(-2px); }
+.promo-card-home:hover .pet-toy-dog-home img { transform: scale(1.08) rotate(-5deg) translateY(-3px); }
+.promo-card-home:hover .pet-cat-toys-home img { transform: scale(1.08) rotate(4deg) translateY(-3px); }
+.promo-card-home:hover .pet-treats-cat-home img { transform: scale(1.08) translateY(-3px); }
+.promo-card-home:hover .pet-spa-dog-home img { transform: scale(1.08) translateY(-4px); }
+
+
+@keyframes symmetricStepScrollHome {
+    /* cart 1 */
+    0%, 10% { transform: translateX(0px); }
+    /* cart 2 */
+    12.5%, 22.5% { transform: translateX(-580px); }
+    /* cart 3 */
+    25%, 35% { transform: translateX(-1160px); }
+    /* cart 4 */
+    37.5%, 47.5% { transform: translateX(-1740px); }
+    /* cart 5 */
+    50%, 60% { transform: translateX(-2320px); }
+    /* cart 6 */
+    62.5%, 72.5% { transform: translateX(-2900px); }
+    /* cart 7 */
+    75%, 85% { transform: translateX(-3480px); }
+    /* cart 8 */
+    87.5%, 97.5% { transform: translateX(-4060px); }
+    /* Loop */
+    100% { transform: translateX(-4640px); }
+}
+
+
+
+
+/* ==========================================================================
+   ✨ SECTION: WHY CHOOSE US (Ref: part home.PNG Style) ✨
+   ========================================================================== */
+
+.choose-section-home {
+    /* background-color: #fbf5e7;  */
+    background-color: #f4ebd4;
+    padding: 100px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.choose-container-home {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.choose-header-home {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.choose-badge-top-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.choose-paw-svg-home {
+    width: 32px;
+    height: 32px;
+    color: #a85f68; 
+    flex-shrink: 0;
+}
+
+.choose-subtitle-home {
+    font-size: 13px;
+    font-weight: 700;
+    color: #756f70;
+    letter-spacing: 2px;
+}
+
+.choose-title-main-home {
+    font-size: 38px;
+    font-weight: 800;
+    color: #a85f68;
+    margin: 5px 0 0 0;
+}
+
+.choose-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.choose-card-item-home {
+    /* background-color: #f4ebd4; */
+    /* background-color: #fbf5e7; */
+     background-color: #efe3ce;
+    
+    /* background-image: 
+        linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px); */
+        background-image: 
+        linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center;
+    background-clip: padding-box;
+
+    border-radius: 40px; 
+    padding: 45px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+.choose-card-item-home:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(168, 95, 104, 0.08);
+}
+
+.choose-icon-wrapper-home {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-shrink: 0; 
+}
+
+.choose-blob-bg-home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: rotate(-10deg);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.5s ease;
+    z-index: 1;
+}
+
+.choose-card-item-home:hover .choose-blob-bg-home {
+    transform: rotate(15deg) scale(1.08);
+    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+}
+
+.blob-orange-home { background-color: rgba(255, 216, 179, 0.6); }
+.blob-purple-home { background-color: rgba(214, 162, 232, 0.5); }
+.blob-blue-home   { background-color: rgba(174, 216, 242, 0.6); }
+.blob-green-home  { background-color: rgba(168, 230, 207, 0.6); }
+.blob-yellow-home { background-color: rgba(255, 234, 167, 0.6); }
+.blob-pink-home   { background-color: rgba(209, 138, 147, 0.4); }
+
+.choose-icon-svg-home {
+    width: 36px; 
+    height: 36px;
+    color: #4a4a58; 
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0; 
+}
+
+.choose-card-item-home h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #a85f68;
+    margin: 0 0 12px 0;
+}
+
+.choose-card-item-home p {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #7e7e8c;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+
+
+/* ==========================================================================
+   🌟 CONTAINER & IMAGE: FULL WIDTH FIXED 🌟
+   ========================================================================== */
+
+.choose-image-pet-home {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-end;    
+    background-color: #fbf5e7; 
+    overflow: hidden;
+    padding: 20px 0 0 0 !important; 
+    margin: 0 !important;
+}
+
+
+.pets-bottom-img-home {
+    width: 100% !important;       
+    max-width: 40% !important;   
+    height: auto;                
+    display: block;
+    margin: 0 auto;
+    vertical-align: bottom;       
+}
+

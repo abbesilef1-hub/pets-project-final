@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght=500;600;700&family=Outfit:wght=400;600;700&display=swap');
+
+/* GLOBAL CONTAINER */
+.wrapper-login {
+    height: calc(100vh - 80px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* يمنع الـ scroll باش تظهر فرد واجهة */
+    gap: 40px; /* مسافة ممتازة بين الـ Form والتصويرة */
+}
+
+/* THE CUTE PET IMAGE FOR LOGIN (ROTATED RIGHT) */
+.img-pet-login {
+    max-width: 320px; /* نفس حجم تصويرة الـ register باش يجيو قد قد */
+    height: auto;
+    object-fit: contain;
+    transform: rotate(8deg); /* مائلة لليمن (عكس الـ register) تعطي منظر روعة */
+    filter: drop-shadow(0 10px 20px rgba(209, 138, 147, 0.15));
+    animation: floatPetLogin 4s ease-in-out infinite; /* حركة إنسيابية خفيفة */
+}
+
+/* حركة تطلع وتهبط خفيفة للتصويرة */
+@keyframes floatPetLogin {
+    0%, 100% { transform: translateY(0) rotate(8deg); }
+    50% { transform: translateY(-10px) rotate(6deg); }
+}
+
+/* THE CARD - MODERATED COMPACT */
+.form-login {
+    background: #ffffff;
+    max-width: 425px; 
+    width: 100%;
+    padding: 30px 40px; /* تعديل الـ padding باش تظهر كاملة perfectly */
+    border-radius: 28px;
+    border: 1px solid rgba(209, 138, 147, 0.15);
+    box-shadow: 0 12px 40px rgba(209, 138, 147, 0.08);
+    text-align: center;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADING */
+.form-signin-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px; /* حجم متناسق ومش كبير برشا */
+    font-weight: 700;
+    color: #4a3f40;
+    margin-top: 0;
+    margin-bottom: 20px; 
+}
+
+.form-signin-heading::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(90deg, #6e6465, #d18a93);
+    border-radius: 10px;
+    margin: 8px auto 0 auto;
+}
+
+/* INPUTS FIELDS */
+.form-login .form-control-login {
+    width: 100%;
+    padding: 11px 20px; 
+    margin-bottom: 12px; /* مسافة قريبة ومنظمة */
+    border: 2px solid rgba(209, 138, 147, 0.12);
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a3f40;
+    outline: none;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-login .form-control-login:focus {
+    border-color: #d18a93;
+    box-shadow: 0 4px 12px rgba(209, 138, 147, 0.08);
+}
+
+/* REMEMBER ME CHECKBOX */
+.checkbox-login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6e6465;
+    margin-top: 2px;
+    margin-bottom: 15px; 
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.checkbox-login input {
+    accent-color: #d18a93;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* LOGIN BUTTON */
+.form-login .bouton-login {
+    width: 100%;
+    padding: 12px; 
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #6e6465, #d18a93);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(209, 138, 147, 0.15);
+    transition: all 0.3s ease;
+}
+
+.form-login .bouton-login:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 20px rgba(209, 138, 147, 0.25);
+}
+
+/* REGISTER LINK */
+.form-login .text-login {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6e6465;
+    margin-top: 15px !important; /* يلغي الـ inline style 30px باش ما تهربش لوتة */
+    margin-bottom: 0;
+}
+
+.form-login .text-login a {
+    color: #d18a93;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.form-login .text-login a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE FOR TABLETS & MOBILES */
+@media (max-width: 850px) {
+    .img-pet-login {
+        display: none; /* تتخبى التصويرة في الشاشات الصغيرة باش الـ Form ياخذ راحتو */
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper-login {
+        padding: 10px;
+    }
+    .form-login {
+        padding: 25px 20px;
+    }
+}

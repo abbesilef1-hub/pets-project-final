@@ -1,0 +1,204 @@
+/* ==========================================================================
+   ADD PET MODAL STYLE (addpet.css) - MATCHING EDITUSER 100%
+   ========================================================================== */
+
+/* 1. El bouton principal eli f-west el dashboard */
+/* .addbuttonpet {
+  background-color: #d18a93 !important;
+  color: #121216 !important;
+  border: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.addbuttonpet:hover {
+  background-color: #c07b84 !important;
+  box-shadow: 0 4px 12px rgba(209, 138, 147, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.addbuttonpet svg {
+  stroke: #121216 !important;
+} */
+
+.addbuttonpet {
+  background-color: #d18a93 !important;
+  color: #121216 !important;
+  border: none !important;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  border-radius: 10px !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.addbuttonpet:hover {
+  background-color: #c07b84 !important;
+  box-shadow: 0 4px 14px rgba(209, 138, 147, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.addbuttonpet svg {
+  stroke: #121216 !important;
+  fill: none !important; 
+}
+
+
+.addbuttonpet:focus,
+.addbuttonpet:active,
+.addbuttonpet:focus-visible {
+  outline: none !important;
+  box-shadow: none !important; 
+  background-color: #d18a93 !important;
+}
+
+
+.addbuttonpet, 
+.addbuttonpet:focus, 
+.addbuttonpet:active, 
+.addbuttonpet:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 2. El Modal Box content styled kima el dark-modal-wrapper */
+.modaladdpet .modal-content {
+  background-color: #1a1a22 !important;                  /* Dark gray box matching edituser */
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;                         /* Border radius matching edituser */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  margin-top: 100px;
+}
+
+/* 3. Modal Header */
+.modaladdpet .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 20px 24px !important;
+}
+
+/* El Title iradd lounou Rose pastel accent exact kima edituser */
+.modaladdpet .modal-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #d18a93 !important;                             
+}
+
+/* El bouton X mta3 el close m3a el Rose Pastel Filter */
+.modaladdpet .modal-header .btn-close {
+  filter: invert(64%) sepia(21%) saturate(674%) hue-rotate(305deg) brightness(92%) contrast(84%) !important;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.modaladdpet .modal-header .btn-close:hover {
+  filter: invert(58%) sepia(22%) saturate(650%) hue-rotate(305deg) brightness(88%) contrast(84%) !important;
+  opacity: 1;
+}
+
+/* 4. Modal Body & Form Inputs */
+.modaladdpet .modal-body {
+  padding: 24px !important;
+  max-height: 60vh; 
+  overflow-y: auto;
+}
+
+/* Customizing scrollbar lel modal body */
+.modaladdpet .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modaladdpet .modal-body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.modaladdpet .form-label {
+  color: #8c8c9e !important;                             /* Nafs el gray color mta3 edituser labels */
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.modaladdpet .form-control {
+  background-color: #121216 !important;                  /* Pure dark matching dark-modal-input */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;                        /* Radius 10px matching edituser */
+  padding: 10px 15px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.modaladdpet .form-control:focus {
+  border-color: #d18a93 !important;
+  box-shadow: 0 0 8px rgba(209, 138, 147, 0.2) !important;
+}
+
+.modaladdpet .form-control::placeholder {
+  color: #525266 !important;
+  font-size: 13px;
+}
+
+/* 5. Modal Footer & Action Buttons */
+.modaladdpet .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 16px 24px !important;
+  gap: 10px;
+}
+
+/* Bouton Close (Grey structure styled kima edituser) */
+.modaladdpet .modal-footer .btn-secondary {
+  background: rgb(201, 199, 199) !important;        
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;  
+  color: #404041a9 !important;                               
+  padding: 6px 18px 9px 18px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -5px;
+}
+
+.modaladdpet .modal-footer .btn-secondary:hover {
+  background-color: rgb(158, 157, 157) !important;   
+  border-color: rgba(255, 253, 253, 0.25) !important;      
+  color: #ffffff !important;                               
+}
+
+/* Bouton Add Pet (Rose accent structure styled kima btn-modal-save) */
+.modaladdpet .modal-footer .btn-primary {
+  background-color: #d18a93 !important;
+  color: #121216 !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  border: none !important;
+  padding: 6px 18px 9px 18px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -5px;
+}
+
+.modaladdpet .modal-footer .btn-primary:hover {
+  background-color: #c07b84 !important;
+  color: #f8d4d9 !important;
+  box-shadow: none !important; /* Na7it el glow el kdim bech ykoun matching safe screen */
+}

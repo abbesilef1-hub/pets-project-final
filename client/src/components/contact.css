@@ -1,0 +1,516 @@
+/* ==========================================================================
+   1. HARMONISATION GLOBALE & STRUCTURE
+   ========================================================================== */
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a3f40;
+    box-sizing: border-box;
+}
+
+/* En-tête de la page */
+.contact-header h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #4a3f40;         
+    padding-bottom: 15px;       
+    margin-bottom: 40px;       
+    width: 100%;                
+}
+
+.contact-header h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 10px auto;
+    background: linear-gradient(90deg, #6e6465, #d18a93);
+    border-radius: 10px;
+}
+
+/* .contact-header h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #6e6465, #d18a93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.contact-header p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #726667;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Séparateur de pattes (identique à votre page d'accueil) */
+.paw-divider-vet {
+    display: flex;
+    align-items: center;      
+    justify-content: center;   
+    gap: 18px;
+    margin: 15px 0;    
+    width: 100%;
+}
+
+.paw-divider-vet span:first-child,
+.paw-divider-vet span:last-child {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d18a93, transparent);
+    opacity: 0.5;
+}
+
+.paws-vet {
+    display: flex;
+    gap: 10px;
+}
+
+.paw-icon-vet {
+    width: 24px;
+    height: 24px;
+    fill: url(#veterinaireGradient); /* Utilise le dégradé SVG défini */
+    opacity: 0.85;
+}
+
+/* Disposition principale en 2 Colonnes */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+/* ==========================================================================
+   2. COLONNE GAUCHE - INFORMATIONS DE CONTACT
+   ========================================================================== */
+.contact-info {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #f2ede6;
+    box-shadow: 0 4px 20px rgba(74, 63, 64, 0.02);
+}
+
+.contact-info h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #4a3f40;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-subtitle-contact {
+    font-size: 0.9rem;
+    color: #726667;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+/* Lignes d'informations (Téléphone, Adresse, Horaires) */
+.info-item-contact, .info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.info-icon-contact {
+    width: 48px;
+    height: 48px;
+    background-color: #fdf2f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon-contact svg {
+    width: 22px;
+    height: 22px;
+    fill: #d18a93;
+}
+
+.info-item-contact h3, .info-item h3 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4a3f40;
+}
+
+.info-item-contact p, .info-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #726667;
+}
+
+/* Section Réseaux Sociaux */
+.social-section {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px dashed #e8e2d8;
+}
+
+.social-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4a3f40;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e8e2d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.social-icon-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #6e6465;
+    transition: fill 0.25s ease;
+}
+
+.social-icon-btn:hover {
+    border-color: #d18a93;
+    background-color: #fffafb;
+    transform: translateY(-3px);
+}
+
+.social-icon-btn:hover svg {
+    fill: #d18a93;
+}
+
+/* ==========================================================================
+   3. COLONNE DROITE - FORMULAIRE DE CONTACT
+   ========================================================================== */
+.contact-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #f2ede6;
+    box-shadow: 0 4px 20px rgba(74, 63, 64, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 55px;
+}
+
+.form-group-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group-contact label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a3f40;
+}
+
+.form-group-contact input,
+.form-group-contact textarea {
+    padding: 14px 18px;
+    border: 1px solid #e8e2d8;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    color: #4a3f40;
+    background-color: #ffffff;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.form-group-contact input::placeholder,
+.form-group-contact textarea::placeholder {
+    color: #a39899;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.form-group-contact input:focus,
+.form-group-contact textarea:focus {
+    border-color: #d18a93;
+    box-shadow: 0 0 0 3px rgba(209, 138, 147, 0.15);
+    background-color: #fffafb;
+}
+
+.form-group-contact textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Bouton d'envoi dégradé */
+.btn-submit-contact {
+    margin-top: 10px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #6e6465 0%, #d18a93 100%);
+    border: none;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(110, 100, 101, 0.15);
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Aligné à gauche sur PC */
+    min-width: 180px;
+}
+
+.btn-submit-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(209, 138, 147, 0.3);
+    opacity: 0.95;
+}
+
+.btn-submit-contact:active {
+    transform: translateY(0);
+}
+
+/* Style pour la carte Google Maps */
+.contact-map {
+    grid-column: 1 / -1; /* Fait prendre toute la largeur sur 2 colonnes */
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #f2ede6;
+    box-shadow: 0 4px 20px rgba(74, 63, 64, 0.02);
+    margin-top: 20px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   5. AJOUTS DISPOSITION INTERACTIVE (URGENCE, NEWSLETTER, GPS)
+   ========================================================================== */
+
+/* Bouton d'appel d'urgence (Colonne gauche) */
+/* Bouton d'urgence complet */
+.btn-emergency-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espace entre le téléphone et le texte */
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px 20px;
+    background-color: #fdf2f3;
+    border: 2px dashed #d18a93;
+    color: #d18a93;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+/* Style spécifique pour le SVG à l'intérieur du bouton */
+.btn-emergency-contact svg {
+    width: 20px;
+    height: 20px;
+    fill: #d18a93; /* Donne la couleur rose au téléphone */
+    transition: fill 0.25s ease;
+}
+
+/* Effet Hover (au survol de la souris) */
+.btn-emergency-contact:hover {
+    background-color: #d18a93;
+    color: #ffffff;
+    border-style: solid;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(209, 138, 147, 0.2);
+}
+
+/* Change aussi la couleur du SVG au survol */
+.btn-emergency-contact:hover svg {
+    fill: #ffffff; /* Le téléphone devient blanc quand le fond devient rose */
+}
+
+/* Effet au clic */
+.btn-emergency-contact:active {
+    transform: translateY(0);
+}
+
+/* Case à cocher Newsletter (Formulaire) */
+.form-checkbox-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.form-checkbox-contact input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #d18a93; /* Colore la case en rose au clic */
+    cursor: pointer;
+}
+
+.form-checkbox-contact label {
+    font-size: 0.88rem;
+    color: #726667;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Conteneur de la Carte + Bouton Itinéraire */
+.map-wrapper-contact {
+    grid-column: 1 / -1; /* Prend toute la largeur */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-map {
+    width: 95%;
+    height: 350px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #f2ede6;
+    box-shadow: 0 4px 20px rgba(74, 63, 64, 0.02);
+}
+
+/* Bouton Itinéraire GPS */
+.btn-gps-contact {
+    align-self: center;
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #6e6465;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(110, 100, 101, 0.1);
+    transition: all 0.25s ease;
+}
+
+.btn-gps-contact:hover {
+    background-color: #4a3f40;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(74, 63, 64, 0.2);
+}
+
+.pink-paw {
+    display: inline-block;
+    filter: sepia(1) saturate(5) hue-rotate(310deg) brightness(0.9);
+}
+
+/* ==========================================================================
+   SECTION COMPAGNON APP CONTACT (IMAGE + BOUTONS STORES)
+   ========================================================================== */
+.app-contact {
+    grid-column: 1 / -1; /* Prend toute la largeur de la page contact */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fdf8f5 0%, #fdf2f3 100%);
+    border-radius: 24px;
+    margin-top: 50px;
+    overflow: hidden; /* Empêche l'image de dépasser des bords arrondis */
+    border: 1px solid #f2ede6;
+    box-shadow: 0 10px 30px rgba(74, 63, 64, 0.03);
+    width: 90%;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+/* Conteneur de la grande image (Chien & Chat) */
+.img-app-contact {
+    flex: 1;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-app-contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre proprement l'image pour remplir l'espace */
+    display: block;
+}
+
+/* Zone de texte et description */
+.text-app-contact {
+    flex: 1.2;
+    padding: 40px 50px;
+    text-align: left;
+}
+
+.text-app-contact h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d18a93; /* Ton rose signature */
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.text-app-contact h4 {
+    font-size: 1.7rem;
+    color: #4a3f40; /* Ton marron doux */
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.text-app-contact p {
+    font-size: 0.95rem;
+    color: #726667;
+    margin: 0 0 30px 0;
+}
+
+/* Conteneur des deux boutons de téléchargement */
+.app-contact-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Liens des badges App Store et Google Play */
+.store-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.store-link img {
+    height: 46px; /* Taille standardisée et propre */
+    width: auto;
+    display: block;
+}
+
+/* Animation au survol des boutons */
+.store-link:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 6px 15px rgba(74, 63, 64, 0.15));
+}
+
+
+
+

@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Outfit:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&family=Quicksand:wght@500;600&family=DM+Sans:wght@500;600&family=Nunito:wght@500;600&display=swap');
+
+/* NAVBAR */
+.parent {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 30px; 
+  padding: 12px 35px;
+  background: rgb(255, 255, 255); 
+  backdrop-filter: blur(10px); 
+  border-top: 2px solid rgba(209, 138, 147, 0.15);
+  border-right: 1.5px solid rgba(209, 138, 147, 0.15); 
+  border-radius: 50px; 
+  box-shadow: 0 10px 30px rgba(209, 138, 147, 0.08);
+  gap: 25px;
+  height: 70px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;             
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800;       
+  letter-spacing: -0.5px;       
+  color: #4a3f40;               
+}
+
+.logo span em {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(135deg, #d18a93 30%, #eab0a2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 4px; 
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: -30px;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif; 
+  color: #6e6465;
+  font-weight: 600; 
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  position: relative;
+  gap: 7px;
+}
+
+/* Hover + Focus (Ki tcliqui wala t7ott souris yo93od thabet) */
+.links a:hover,
+.links a:focus,
+.links a:active {
+  color: #d18a93;
+  outline: none;
+}
+
+/* El 5att el sghir loutani */
+.links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #d18a93;
+  border-radius: 5px;
+  margin-top: 4px; 
+  transition: width 0.3s ease;
+}
+
+/* Ki t-hoveri wala tcliqui (Focus), el 5att yokhroj direct */
+.links a:hover::after,
+.links a:focus::after,
+.links a:active::after {
+  width: 12px; 
+}
+
+/* USER NAME IN NAVBAR */
+.user-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a3f40;
+  margin: -50px 0px 0px 0px;
+  padding: 4px 14px 6px 14px;
+  background: #fdf6f7; 
+  border-radius: 20px;
+  border: 1px solid rgba(209, 138, 147, 0.15);
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap; 
+}
+
+/* Faza khfifa ki t-hoveri 3lih */
+.user-name:hover {
+  color: #d18a93;
+  border-color: #d18a93;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(209, 138, 147, 0.1);
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  gap: 10px; 
+  margin-top: -48px;
+}
+
+.icons button {
+  border: none;
+  background: #fdf6f7; 
+  cursor: pointer;
+  width: 40px;   
+  height: 40px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  padding: 0;    
+}
+
+.icons button:hover {
+  background: #d18a93; 
+}
+
+.icons svg {
+  width: 18px;
+  height: 18px;
+  fill: #d18a93; 
+  transition: 0.3s;
+}
+
+.icons button:hover svg {
+  fill: #ffffff; 
+  transform: scale(1.05); 
+}
+
+/* Conteneur principal des icônes */
+
+/* .icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: -48px;
+}
+
+
+.icon-item-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.icons button {
+  border: none;
+  background: #fdf6f7;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  padding: 0;
+  position: relative; 
+}
+
+.icons button:hover {
+  background: #d18a93;
+}
+
+
+.icons svg {
+  width: 18px;
+  height: 18px;
+  fill: #d18a93;
+  transition: 0.3s;
+}
+
+.icons button:hover svg {
+  fill: #fff;
+}
+
+
+.badge-plus-one {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 2px;
+
+  background: #d18a93;
+  color: white;
+
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: popBadge 0.3s ease;
+}
+
+
+@keyframes popBadge {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+
+/* LINK LOGIN (Bouton Connexion) */
+.linklogin {
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff; 
+  /* margin: 0; */
+  margin: -50px 0px 0px 0px;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #d18a93 30%, #eab0a2 100%); 
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(209, 138, 147, 0.2);
+}
+
+.linklogin:hover {
+  transform: translateY(-1px); 
+  box-shadow: 0 6px 15px rgba(209, 138, 147, 0.3);
+  opacity: 0.95;
+}
+
+.linklogin:active {
+  transform: translateY(1px);
+}
+

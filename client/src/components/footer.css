@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Outfit:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&family=Quicksand:wght@500;600&family=DM+Sans:wght@500;600&family=Nunito:wght@500;600&display=swap');
+
+.footer-parent {
+    background-color: #ffffff;
+    border-top: 1px solid #f2ede6;
+    padding: 60px 0 0 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #4a3f40;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 0 60px;   
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 60px;
+}
+
+/* Style commun pour les titres des sections */
+.part2-footer h3, 
+.part3-footer h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+    color: #4a3f40;
+}
+
+/* Petite ligne rose sous les titres */
+.part2-footer h3::after, 
+.part3-footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #d18a93;
+    border-radius: 2px;
+}
+
+/* --- BLOCK 1 : TON NOUVEAU LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;             
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 800;       
+    letter-spacing: -0.5px;       
+    color: #4a3f40;              
+    margin-bottom: 15px;
+}
+
+.logo span em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+    background: linear-gradient(135deg, #d18a93 30%, #eab0a2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 4px; 
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #726667;
+    margin: 0;
+}
+
+/* --- NEW CAT & DOG SVGS IN PART 1 --- */
+.svg-footer {
+    display: flex;
+    align-items: center;
+    gap: 35px;         
+    margin-top: 15px;  
+    margin-bottom: -10px;
+}
+
+.svg-footer svg {
+    width: 28px;       
+    height: 28px;
+    fill: #d18a93;     
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Animation sympa au survol */
+.svg-footer svg:hover {
+    fill: #eab0a2;     
+    transform: translateY(-3px) scale(1.1); 
+}
+
+/* Les petites pattes roses */
+.footer-paws-decor {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.footer-paws-decor span {
+    display: inline-block;
+    font-size: 1.1rem;
+    filter: sepia(1) saturate(5) hue-rotate(310deg) brightness(0.9);
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    /* margin-top: 5px; */
+}
+
+.footer-paws-decor span:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* --- BLOCK 2 : Quick Links (En Gras) --- */
+.part2-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.part2-footer ul li {
+    margin-bottom: 12px;
+}
+
+.part2-footer ul li a {
+    text-decoration: none;
+    color: #726667;
+    font-size: 0.92rem;
+    font-weight: 600; 
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.part2-footer ul li a:hover {
+    color: #d18a93;
+    transform: translateX(5px);
+}
+
+/* --- BLOCK 3 : Contact Info --- */
+.contact-item, 
+.contact-hours {
+    font-size: 0.92rem;
+    color: #726667;
+    margin: 0 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-hours {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px dashed #e8e2d8;
+}
+
+.part3-footer svg {
+    width: 16px;
+    height: 16px;
+    fill: #d18a93;
+    flex-shrink: 0;
+}
+
+/* --- BARRE DU BAS : COPYRIGHT & STRIPE (CORRIGÉE ET CENTRÉE) --- */
+.footer-bas {
+    border-top: 1px solid #f2ede6;
+    margin-top: 50px;
+    padding: 15px 0; 
+    background-color: #faf8f5;
+}
+
+.footer-petcare {
+    max-width: 480px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    /* display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px; */
+    text-align: center;
+}
+
+.footer-petcare p {
+    font-size: 0.78rem; 
+    color: #a39899;
+    margin: 0;
+    font-weight: 500;
+}
+
+.secure-payment-info {
+    font-size: 0.70rem; 
+    color: #6e6465;
+    margin-top: 7px;
+    /* display: flex;
+    align-items: center;
+    gap: 5px; */
+}
+
+.secure-payment-info strong {
+    color: #4a3f40;
+    font-weight: 700;
+}
+

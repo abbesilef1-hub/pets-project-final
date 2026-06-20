@@ -1,0 +1,207 @@
+/* ==========================================
+   🎯 1. TRIGGER BUTTON STYLE (THE CRAYON ICON)
+   ========================================== */
+.edit-pet-btn {
+  background: none !important;
+  border: none !important;
+  color: #d18a93 !important;             /* Rose Pastel theme accent */
+  padding: 8px !important;
+  border-radius: 6px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-pet-btn:hover {
+  background-color: rgba(209, 138, 147, 0.1) !important;
+  color: #c07b84 !important;             /* Rose a8me9 chwaya fil hover */
+  box-shadow: 0 0 8px rgba(209, 138, 147, 0.2) !important;
+}
+
+.edit-pet-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================
+   🎯 2. BOOTSTRAP MODAL DARK CONTAINER
+   ========================================== */
+.pet-modal-wrapper .modal-content {
+  background-color: #1a1a22 !important;  /* Dark gray background box */
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  margin-top: 50px;
+}
+
+.pet-modal-wrapper .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 20px 24px !important;
+}
+
+/* Modal Title (Rose Pastel) */
+.pet-modal-wrapper .modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d18a93 !important;             
+}
+
+/* Close icon (X) styling */
+.pet-modal-wrapper .modal-header .btn-close {
+  /* Hetha el filter ya3ti loun Rose Pastel #d18a93 exact */
+  filter: invert(64%) sepia(21%) saturate(674%) hue-rotate(305deg) brightness(92%) contrast(84%) !important;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.pet-modal-wrapper .modal-header .btn-close:hover {
+  /* Yghemza9 chwaya fil hover kima el titre exact */
+  filter: invert(58%) sepia(22%) saturate(650%) hue-rotate(305deg) brightness(88%) contrast(84%) !important;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   📝 3. MODAL BODY, FORM INPUTS & SCROLLBAR
+   ========================================================================== */
+
+/* Targetting el modal body dakhli mta3 edit pet bech ya3mel scroll kima addpet */
+.pet-modal-wrapper .modal-body {
+  padding: 24px !important;
+  max-height: 60vh;               /* Nv height fixed bech ya3mel scroll clean */
+  overflow-y: auto !important;     /* Auto vertical scrollbar */
+}
+
+/* Customizing scrollbar lel modal body matching 100% addpet */
+.pet-modal-wrapper .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pet-modal-wrapper .modal-body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.modal-info-text {
+  color: #b5b5c3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-info-text strong {
+  color: #ffffff;
+}
+
+.pet-modal-label {
+  color: #8c8c9e;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Custom inputs text fields */
+.pet-modal-input {
+  background-color: #121216 !important;  /* Pure dark input background */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  padding: 10px 15px !important;
+  border-radius: 10px !important;
+  height: 42px;
+  font-size: 0.95rem;
+  outline: none !important;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Input focus style with Rose glow */
+.pet-modal-input:focus {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-color: #d18a93 !important;      /* Rose border on active focus */
+  box-shadow: 0 0 8px rgba(209, 138, 147, 0.2) !important;
+}
+
+.pet-modal-input::placeholder {
+  color: #555566 !important;
+  opacity: 0.8;
+}
+
+/* ==========================================
+   ✨ 4. MODAL FOOTER & ACTION BUTTONS
+   ========================================== */
+.pet-modal-wrapper .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 16px 24px !important;
+  display: flex;
+  gap: 12px;
+}
+
+/* ⚪ Cancel Button (Gris Minimalist) */
+.btn-modal-close-pet {
+  background: rgb(201, 199, 199) !important;        
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;  
+  color: #404041a9 !important;                               
+  padding: 6px 18px 9px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -5px;
+}
+
+.btn-modal-close-pet:hover {
+  background-color: rgb(158, 157, 157) !important;   
+  border-color: rgba(255, 253, 253, 0.25) !important;      
+  color: #ffffff !important;                               
+}
+
+
+
+/* 🌸 Save Changes Button (Rose Accent) */
+.btn-modal-save-pet {
+  background-color: #d18a93 !important;                    /* 🌟 ROSE BACKGROUND */
+  color: #121216 !important;                               /* Dark text for great contrast */
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none !important;
+  padding: 6px 18px 9px 18px !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+}
+
+.btn-modal-save-pet:hover {
+  background-color: #c07b84 !important;
+  color: #f8d4d9 !important;
+  box-shadow: none !important;
+}
+
+.btn-modal-close-pet {
+  background: rgb(201, 199, 199) !important;        
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;  
+  color: #404041a9 !important;                               
+  padding: 6px 18px 9px 18px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -5px;
+}
+
+.btn-modal-close-pet:hover {
+  background-color: rgb(158, 157, 157) !important;   
+  border-color: rgba(255, 253, 253, 0.25) !important;      
+  color: #ffffff !important;                               
+}
+

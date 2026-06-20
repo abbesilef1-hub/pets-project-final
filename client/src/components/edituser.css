@@ -1,0 +1,159 @@
+/* ==========================================
+   🎯 EDIT BUTTON STYLE (MATCHING THE STRUCTURE)
+   ========================================== */
+
+/* Targetting el button mta3 el edit b-nafs el methoda */
+.table td:nth-last-child(2) button,
+.edit-user-btn {
+  background: none !important;
+  border: none !important;
+  color: #5cb85c !important;             /* Nafs el Lawn el Akhdar el clear */
+  padding: 8px !important;
+  border-radius: 6px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover style matching 100% */
+.table td:nth-last-child(2) button:hover,
+.edit-user-btn:hover {
+  background-color: rgba(92, 184, 92, 0.1) !important;
+  color: #4cae4c !important;             /* Akhdar a8me9 chwaya fil hover */
+  box-shadow: 0 0 8px rgba(92, 184, 92, 0.2) !important;
+}
+
+/* Control size mta3 el SVG icon dakhli */
+.edit-user-btn svg,
+.table td:nth-last-child(2) button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================
+   2. BOOTSTRAP MODAL DARK CONTAINER
+   ========================================== */
+.dark-modal-wrapper .modal-content {
+  background-color: #1a1a22 !important;                  /* Dark gray box */
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  margin-top: 5px;
+}
+
+.dark-modal-wrapper .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark-modal-wrapper .modal-header .btn-close {
+  /* Hetha el filter ya3ti loun Rose Pastel #d18a93 exact */
+  filter: invert(64%) sepia(21%) saturate(674%) hue-rotate(305deg) brightness(92%) contrast(84%) !important;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.dark-modal-wrapper .modal-header .btn-close:hover {
+  /* Yghemza9 chwaya fil hover kima el titre exact */
+  filter: invert(58%) sepia(22%) saturate(650%) hue-rotate(305deg) brightness(88%) contrast(84%) !important;
+  opacity: 1;
+}
+
+.dark-modal-wrapper .modal-title {
+  /* font-size: 18px;
+  font-weight: 600;
+  color: #d18a93;    */
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #d18a93 !important; 
+}
+
+/* ==========================================
+   3. MODAL BODY & FORM STYLING
+   ========================================== */
+.modal-info-text {
+  color: #b5b5c3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-info-text strong {
+  color: #ffffff;
+}
+
+.modal-label {
+  color: #8c8c9e;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* DROPDOWN SELECT INPUT */
+.dark-modal-input {
+  background-color: #121216 !important;                  /* Pure dark background */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  padding: 10px 15px !important;
+  border-radius: 10px !important;
+  outline: none !important;
+}
+
+.dark-modal-input:focus {
+  border-color: #d18a93 !important;
+  box-shadow: 0 0 8px rgba(209, 138, 147, 0.2) !important;
+}
+
+/* Fix dropdown option colors for chrome/safari */
+.dark-modal-input option {
+  background-color: #1a1a22;
+  color: white;
+}
+
+/* ==========================================
+   4. MODAL FOOTER BUTTONS
+   ========================================== */
+.dark-modal-wrapper .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  gap: 10px;
+}
+
+.btn-modal-close {
+  background: rgb(201, 199, 199) !important;        
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;  
+  color: #404041a9 !important;                               
+  padding: 6px 18px 9px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -1px;
+}
+
+.btn-modal-close:hover {
+  background-color: rgb(158, 157, 157) !important;   
+  border-color: rgba(255, 253, 253, 0.25) !important;      
+  color: #ffffff !important;                               
+}
+
+.btn-modal-save {
+  background-color: #d18a93 !important;
+  color: #121216 !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  padding: 6px 18px 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 35px;
+  margin-top: -1px;
+}
+
+.btn-modal-save:hover {
+  background-color: #c07b84 !important;
+  color: #f8d4d9 !important;
+}

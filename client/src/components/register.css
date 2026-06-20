@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght=500;600;700&family=Outfit:wght=400;600;700&display=swap');
+
+/* GLOBAL CONTAINER (NO SCROLL) */
+.wrapper-register {
+    height: calc(100vh - 80px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden; 
+    gap: 30px;
+}
+
+/* THE CUTE PET IMAGE (ROTATED & PLACED SIDEWAYS) */
+.pet-image {
+    max-width: 320px; 
+    height: auto;
+    object-fit: contain;
+    transform: rotate(-8deg); 
+    filter: drop-shadow(0 10px 20px rgba(209, 138, 147, 0.15));  
+    animation: floatPet 4s ease-in-out infinite;
+}
+
+/* حركة خفيفة للتصويرة تطلع وتهبط */
+@keyframes floatPet {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-10px) rotate(-6deg); }
+}
+
+/* THE CARD CONTAINER - PERFECT BALANCE */
+.form-signin-register {
+    background: #ffffff;
+    max-width: 580px; 
+    width: 100%;
+    padding: 20px 35px; 
+    border-radius: 24px;
+    border: 1px solid rgba(209, 138, 147, 0.15);
+    box-shadow: 0 12px 40px rgba(209, 138, 147, 0.08);
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; 
+}
+
+/* HEADING */
+.form-signin-heading-register {
+    grid-column: span 2;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px; 
+    font-weight: 700;
+    color: #4a3f40;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-signin-heading-register::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(90deg, #6e6465, #d18a93);
+    border-radius: 10px;
+    margin: 6px auto 0 auto;
+}
+
+/* INPUTS FIELDS */
+.form-signin-register .form-control-register {
+    width: 100%;
+    padding: 10px 18px; 
+    border: 2px solid rgba(209, 138, 147, 0.12);
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a3f40;
+    outline: none;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-signin-register .form-control-register:focus {
+    border-color: #d18a93;
+    box-shadow: 0 4px 12px rgba(209, 138, 147, 0.08);
+}
+
+/* BUTTON REGISTER */
+.form-signin-register .bouton-register {
+    grid-column: span 2;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #6e6465, #d18a93);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(209, 138, 147, 0.15);
+    margin-top: 8px; 
+    transition: all 0.3s ease;
+}
+
+.form-signin-register .bouton-register:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 20px rgba(209, 138, 147, 0.25);
+}
+
+/* LINK TO LOGIN */
+.form-signin-register .text-register {
+    grid-column: span 2;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6e6465;
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 0;
+}
+
+.form-signin-register .text-register a {
+    color: #d18a93;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.form-signin-register .text-register a:hover {
+    text-decoration: underline;
+}
+
+/* Chrome/Safari/Opera arrows removal */
+.form-signin-register input[type="number"]::-webkit-inner-spin-button,
+.form-signin-register input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* RESPONSIVE FOR MOBILES & TABLETS */
+@media (max-width: 900px) {
+    .pet-image {
+        display: none; 
+    }
+}
+
