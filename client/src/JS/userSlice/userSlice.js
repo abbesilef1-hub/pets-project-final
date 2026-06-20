@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// const API = "http://localhost:5000/user";
+// const API = "https://pets-project-final.vercel.app/user";
 
 /* REGISTER */
 export const userRegister = createAsyncThunk(
   "user/register",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post(`http://localhost:5000/user/register`, user);
+      const response = await axios.post(`https://pets-project-final.vercel.app/user/register`, user);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response?.data);
@@ -21,7 +21,7 @@ export const userLogin = createAsyncThunk(
   "user/login",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post(`http://localhost:5000/user/login`, user);
+      const response = await axios.post(`https://pets-project-final.vercel.app/user/login`, user);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response?.data);
@@ -36,7 +36,7 @@ export const userCurrent = createAsyncThunk(
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.get(`http://localhost:5000/user/current`, {
+      const response = await axios.get(`https://pets-project-final.vercel.app/user/current`, {
         headers: {
           Authorization: token,
         },
@@ -51,7 +51,7 @@ export const userCurrent = createAsyncThunk(
 
 export const getusers=createAsyncThunk("user/get", async()=>{
   try {
-    let result=await axios.get("http://localhost:5000/user/");
+    let result=await axios.get("https://pets-project-final.vercel.app/user/");
     return result;
   } catch (error) {
     console.log(error);
@@ -60,7 +60,7 @@ export const getusers=createAsyncThunk("user/get", async()=>{
 
 export const deleteuser=createAsyncThunk("user/delete", async(id)=>{
   try {
-    let result=await axios.delete(`http://localhost:5000/user/${id}`);
+    let result=await axios.delete(`https://pets-project-final.vercel.app/user/${id}`);
     return result;
   } catch (error) {
     console.log(error);
@@ -69,7 +69,7 @@ export const deleteuser=createAsyncThunk("user/delete", async(id)=>{
 
 export const edituser=createAsyncThunk("user/update", async({id, edited})=>{
   try {
-    let result=await axios.put(`http://localhost:5000/user/${id}`, edited);
+    let result=await axios.put(`https://pets-project-final.vercel.app/user/${id}`, edited);
     return result;
   } catch (error) {
     console.log(error);

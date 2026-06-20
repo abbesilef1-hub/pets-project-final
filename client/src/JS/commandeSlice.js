@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getcommandes=createAsyncThunk("commande/get", async()=>{
   try {
-    let result=await axios.get("http://localhost:5000/commande/");
+    let result=await axios.get("https://pets-project-final.vercel.app/commande/");
     return result;
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const getcommandes=createAsyncThunk("commande/get", async()=>{
 
 export const addcommande=createAsyncThunk("commande/add", async(newcommande)=>{
   try {
-    let result=await axios.post("http://localhost:5000/commande/add", newcommande);
+    let result=await axios.post("https://pets-project-final.vercel.app/commande/add", newcommande);
     return result;
   } catch (error) {
     console.log(error);
@@ -21,7 +21,7 @@ export const addcommande=createAsyncThunk("commande/add", async(newcommande)=>{
 
 export const deletecommande=createAsyncThunk("commande/delete", async(id)=>{
   try {
-    let result=await axios.delete(`http://localhost:5000/commande/${id}`);
+    let result=await axios.delete(`https://pets-project-final.vercel.app/commande/${id}`);
     return result;
   } catch (error) {
     console.log(error);
@@ -30,7 +30,7 @@ export const deletecommande=createAsyncThunk("commande/delete", async(id)=>{
 
 export const editcommande=createAsyncThunk("commande/update", async({id, edited})=>{
   try {
-    let result=await axios.put(`http://localhost:5000/commande/${id}`, edited);
+    let result=await axios.put(`https://pets-project-final.vercel.app/commande/${id}`, edited);
     return result;
   } catch (error) {
     console.log(error);
